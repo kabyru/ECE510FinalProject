@@ -1,0 +1,508 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec  8 21:43:13 2019
+# Process ID: 4180
+# Current directory: C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1
+# Command line: vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
+# Log file: C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/top_level.vds
+# Journal file: C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_level.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 290.785 ; gain = 0.000
+Command: synth_design -top top_level -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14504 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 704.984 ; gain = 179.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:51]
+INFO: [Synth 8-3491] module 'demux_2_1' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/demux_2_1.vhd:25' bound to instance 'M1' of component 'demux_2_1' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'demux_2_1' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/demux_2_1.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'demux_2_1' (1#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/demux_2_1.vhd:35]
+INFO: [Synth 8-3491] module 'counter_design' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/counter_design.vhd:35' bound to instance 'M2' of component 'counter_design' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'counter_design' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/counter_design.vhd:45]
+WARNING: [Synth 8-614] signal 'count' is read in the process but is not in the sensitivity list [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/counter_design.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'counter_design' (2#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/counter_design.vhd:45]
+INFO: [Synth 8-3491] module 'design_1_wrapper' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:14' bound to instance 'M3' of component 'design_1_wrapper' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:25]
+INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1583' bound to instance 'design_1_i' of component 'design_1' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1598]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1898]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1922]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1947]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_clk_wiz_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1954]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_mdm_1_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1987]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1071]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (3#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (4#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (5#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:259]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:922]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (6#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:922]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1501]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (7#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1071]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:343]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:557]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:611]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:639]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:693]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:721]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (8#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:343]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:2149]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/.Xil/Vivado-4180-DESKTOP-7JCDLT2/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (9#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/synth/design_1.vhd:1598]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (10#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:25]
+INFO: [Synth 8-3491] module 'TenBit_to_SixteenBit' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/TenBit_to_SixteenBit.vhd:34' bound to instance 'M4' of component 'TenBit_to_SixteenBit' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'TenBit_to_SixteenBit' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/TenBit_to_SixteenBit.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'TenBit_to_SixteenBit' (11#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/TenBit_to_SixteenBit.vhd:39]
+INFO: [Synth 8-3491] module 'bin2bcd' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/bin2bcd.vhd:5' bound to instance 'M5' of component 'bin2bcd' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'bin2bcd' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/bin2bcd.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'bin2bcd' (12#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/bin2bcd.vhd:15]
+INFO: [Synth 8-3491] module 'sev_seg' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/sev_seg.vhd:36' bound to instance 'M6' of component 'sev_seg' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'sev_seg' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/sev_seg.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'sev_seg' (13#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/sev_seg.vhd:47]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/debouncer.vhd:34' bound to instance 'M7' of component 'debouncer' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/debouncer.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (14#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/debouncer.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (15#1) [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/new/top_level.vhd:51]
+WARNING: [Synth 8-3331] design bin2bcd has unconnected port input[15]
+WARNING: [Synth 8-3331] design bin2bcd has unconnected port input[14]
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 774.754 ; gain = 248.813
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.754 ; gain = 248.813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 774.754 ; gain = 248.813
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'M3/design_1_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'M3/design_1_i/mdm_1'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'M3/design_1_i/mdm_1'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'M3/design_1_i/clk_wiz_1'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'M3/design_1_i/clk_wiz_1'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'M3/design_1_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'M3/design_1_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'M3/design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'M3/design_1_i/axi_gpio_0'
+Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'M3/design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'M3/design_1_i/axi_uartlite_0'
+Parsing XDC File [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/constrs_1/new/MicroBlaze.xdc]
+Finished Parsing XDC File [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/constrs_1/new/MicroBlaze.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/constrs_1/new/MicroBlaze.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 898.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 898.215 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'M3/design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 901.199 ; gain = 375.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 901.199 ; gain = 375.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clock100MHz. (constraint file  c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clock100MHz. (constraint file  c:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for M3/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for M3/design_1_i/axi_uartlite_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 901.199 ; gain = 375.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "seg_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 901.199 ; gain = 375.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 33    
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 24    
+	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module demux_2_1 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 2     
+Module counter_design 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module bin2bcd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 33    
+	   2 Input      3 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 24    
+Module sev_seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 901.199 ; gain = 375.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'M3/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'M3/design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'M3/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'M3/design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'M3/design_1_i/mdm_1/Dbg_Clk_0' to pin 'M3/design_1_i/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'M3/design_1_i/mdm_1/Dbg_Update_0' to pin 'M3/design_1_i/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'M3/design_1_i/clk_wiz_1/clk_out1' to pin 'M3/design_1_i/clk_wiz_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 901.199 ; gain = 375.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:59 . Memory (MB): peak = 908.270 ; gain = 382.328
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:59 . Memory (MB): peak = 908.270 ; gain = 382.328
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |design_1_xbar_0               |         1|
+|2     |design_1_axi_gpio_0_0         |         1|
+|3     |design_1_axi_uartlite_0_0     |         1|
+|4     |design_1_clk_wiz_1_0          |         1|
+|5     |design_1_mdm_1_0              |         1|
+|6     |design_1_microblaze_0_0       |         1|
+|7     |design_1_rst_clk_wiz_1_100M_0 |         1|
+|8     |design_1_dlmb_bram_if_cntlr_0 |         1|
+|9     |design_1_dlmb_v10_0           |         1|
+|10    |design_1_ilmb_bram_if_cntlr_0 |         1|
+|11    |design_1_ilmb_v10_0           |         1|
+|12    |design_1_lmb_bram_0           |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------------+------+
+|      |Cell                                  |Count |
++------+--------------------------------------+------+
+|1     |design_1_axi_gpio_0_0_bbox_0          |     1|
+|2     |design_1_axi_uartlite_0_0_bbox_1      |     1|
+|3     |design_1_clk_wiz_1_0_bbox_2           |     1|
+|4     |design_1_dlmb_bram_if_cntlr_0_bbox_6  |     1|
+|5     |design_1_dlmb_v10_0_bbox_7            |     1|
+|6     |design_1_ilmb_bram_if_cntlr_0_bbox_8  |     1|
+|7     |design_1_ilmb_v10_0_bbox_9            |     1|
+|8     |design_1_lmb_bram_0_bbox_10           |     1|
+|9     |design_1_mdm_1_0_bbox_3               |     1|
+|10    |design_1_microblaze_0_0_bbox_4        |     1|
+|11    |design_1_rst_clk_wiz_1_100M_0_bbox_11 |     1|
+|12    |design_1_xbar_0_bbox_5                |     1|
+|13    |CARRY4                                |     3|
+|14    |LUT1                                  |     3|
+|15    |LUT2                                  |     7|
+|16    |LUT3                                  |     6|
+|17    |LUT4                                  |    15|
+|18    |LUT5                                  |    14|
+|19    |LUT6                                  |    33|
+|20    |MUXF7                                 |     1|
+|21    |FDCE                                  |    10|
+|22    |FDRE                                  |    58|
+|23    |IBUF                                  |    18|
+|24    |OBUF                                  |    28|
++------+--------------------------------------+------+
+
+Report Instance Areas: 
++------+--------------------------------+--------------------------------------+------+
+|      |Instance                        |Module                                |Cells |
++------+--------------------------------+--------------------------------------+------+
+|1     |top                             |                                      |  1450|
+|2     |  M1                            |demux_2_1                             |    31|
+|3     |  M2                            |counter_design                        |    63|
+|4     |  M3                            |design_1_wrapper                      |  1254|
+|5     |    design_1_i                  |design_1                              |  1254|
+|6     |      microblaze_0_axi_periph   |design_1_microblaze_0_axi_periph_0    |   374|
+|7     |      microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
+|8     |  M6                            |sev_seg                               |    49|
+|9     |  M7                            |debouncer                             |     7|
++------+--------------------------------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:58 . Memory (MB): peak = 915.820 ; gain = 263.434
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 915.820 ; gain = 389.879
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 926.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+85 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 926.434 ; gain = 635.648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 926.434 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/kaleb/xup/digital/FinalProjectRebuild2/FinalProjectRebuild2.runs/synth_1/top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 21:44:59 2019...

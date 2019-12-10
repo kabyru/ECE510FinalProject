@@ -1,0 +1,6 @@
+11:12:21 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+
+11:12:22 Build Finished (took 680ms)
+

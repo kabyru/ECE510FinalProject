@@ -1,0 +1,1008 @@
+19:13:23 **** Build of project FinalProjectALU_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+
+**** Build of configuration Debug for project FinalProjectALU ****
+
+Nothing to build for project FinalProjectALU
+19:15:01 **** Auto Build of configuration Debug for project FinalProjectALU ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectALU_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectALU.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectALU_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectALU.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: in function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: FinalProjectALU.elf] Error 1
+19:15:19 **** Auto Build of configuration Debug for project FinalProjectALU ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectALU_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:10:
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:38:41: warning: integer constant is too large for its type
+  XGpio_SetDataDirection(&GpioDevice, 2, 0xFFFFFFFFFFFFFFFFFFFFFF);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:38:41: warning: conversion from 'long long unsigned int' to 'u32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:40:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:40:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:70:25: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+                         xil_print("Result is greater than 16 bits. LED output may be incorrect\n");
+                         ^~~~~~~~~
+                         xil_printf
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectALU.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectALU_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectALU.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/MicroBlaze_c_code.o: in function `main':
+C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:70: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:71: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:82: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:83: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:94: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/MicroBlaze_c_code.o:C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:95: more undefined references to `xil_print' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: FinalProjectALU.elf] Error 1
+19:16:02 **** Auto Build of configuration Debug for project FinalProjectALU ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectALU_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:10:
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:38:41: warning: integer constant is too large for its type
+  XGpio_SetDataDirection(&GpioDevice, 2, 0xFFFFFFFFFFFFFFFFFFFFFF);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:38:41: warning: conversion from 'long long unsigned int' to 'u32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:40:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:40:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:82:25: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+                         xil_print("Result is greater than 16 bits. LED output may be incorrect\n");
+                         ^~~~~~~~~
+                         xil_printf
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectALU.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectALU_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectALU.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/MicroBlaze_c_code.o: in function `main':
+C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:82: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:83: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:94: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:95: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:106: undefined reference to `xil_print'
+w:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/MicroBlaze_c_code.o:C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectALU\Debug/../src/MicroBlaze_c_code.c:107: more undefined references to `xil_print' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: FinalProjectALU.elf] Error 1
+19:16:41 **** Auto Build of configuration Debug for project FinalProjectALU ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectALU_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:10:
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:38:41: warning: integer constant is too large for its type
+  XGpio_SetDataDirection(&GpioDevice, 2, 0xFFFFFFFFFFFFFFFFFFFFFF);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:38:41: warning: conversion from 'long long unsigned int' to 'u32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:40:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:40:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectALU.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectALU_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectALU.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectALU.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectALU.elf  |tee "FinalProjectALU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9568	    652	   3132	  13352	   3428	FinalProjectALU.elf
+'Finished building: FinalProjectALU.elf.size'
+' '
+19:39:35 **** Build of project FinalProjectMicroBlaze_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+
+**** Build of configuration Debug for project FinalProjectMicroBlaze ****
+
+Nothing to build for project FinalProjectMicroBlaze
+19:40:28 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: in function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: FinalProjectMicroBlaze.elf] Error 1
+19:41:07 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:30:41: warning: integer constant is too large for its type
+  XGpio_SetDataDirection(&GpioDevice, 2, 0xFFFFFFFFFFFFFFFFFFFFFF);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:30:41: warning: conversion from 'long long unsigned int' to 'u32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:32:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:32:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:62:25: warning: implicit declaration of function 'xil_print'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+                         xil_print("Result is greater than 16 bits. LED output may be incorrect\n");
+                         ^~~~~~~~~
+                         xil_printf
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/MicroBlaze_c_code.o: in function `main':
+C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectMicroBlaze\Debug/../src/MicroBlaze_c_code.c:62: undefined reference to `xil_print'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectMicroBlaze\Debug/../src/MicroBlaze_c_code.c:63: undefined reference to `xil_print'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectMicroBlaze\Debug/../src/MicroBlaze_c_code.c:74: undefined reference to `xil_print'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectMicroBlaze\Debug/../src/MicroBlaze_c_code.c:75: undefined reference to `xil_print'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectMicroBlaze\Debug/../src/MicroBlaze_c_code.c:86: undefined reference to `xil_print'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/MicroBlaze_c_code.o:C:\Users\kaleb\xup\digital\FinalProjectRebuild2\FinalProjectRebuild2.sdk\FinalProjectMicroBlaze\Debug/../src/MicroBlaze_c_code.c:87: more undefined references to `xil_print' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: FinalProjectMicroBlaze.elf] Error 1
+19:44:29 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:30:41: warning: integer constant is too large for its type
+  XGpio_SetDataDirection(&GpioDevice, 2, 0xFFFFFFFFFFFFFFFFFFFFFF);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:30:41: warning: conversion from 'long long unsigned int' to 'u32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:32:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:32:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9568	    652	   3132	  13352	   3428	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+19:45:39 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:32:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:32:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9572	    652	   3136	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+19:45:46 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9576	    652	   3132	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+19:45:56 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9576	    652	   3132	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+19:46:22 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9576	    652	   3132	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+20:39:44 **** Clean-only build of configuration Debug for project FinalProjectMicroBlaze ****
+make clean 
+rm -rf  ./src/MicroBlaze_c_code.o  ./src/MicroBlaze_c_code.d  FinalProjectMicroBlaze.elf.size  FinalProjectMicroBlaze.elf
+' '
+20:39:46 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+../src/MicroBlaze_c_code.c:2:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+20:47:41 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+../src/MicroBlaze_c_code.c:3:10: fatal error: xgpio.h: No such file or directory
+ #include "xgpio.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+20:47:47 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+../src/MicroBlaze_c_code.c:2:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+20:49:03 **** Auto Build of project FinalProjectMicroBlaze_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+20:49:21 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9576	    652	   3132	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+20:50:28 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:55:21 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+../src/MicroBlaze_c_code.c:2:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+21:56:04 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+../src/MicroBlaze_c_code.c:2:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+21:57:43 **** Auto Build of project FinalProjectMicroBlaze_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+21:58:04 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9576	    652	   3132	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+21:59:38 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+22:00:15 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+22:06:33 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+22:22:27 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:14:10: warning: unused variable 'CompValue' [-Wunused-variable]
+  Xuint32 CompValue;
+          ^~~~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9576	    652	   3132	  13360	   3430	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+22:23:30 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9588	    652	   3136	  13376	   3440	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+22:24:26 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:75:24: error: 'compValue' undeclared (first use in this function); did you mean 'CompValue'?
+                     if(compValue > 65535)
+                        ^~~~~~~~~
+                        CompValue
+../src/MicroBlaze_c_code.c:75:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+22:25:03 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:75:24: error: 'compValue' undeclared (first use in this function); did you mean 'CompValue'?
+                     if(compValue > 65535)
+                        ^~~~~~~~~
+                        CompValue
+../src/MicroBlaze_c_code.c:75:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+22:25:12 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:75:24: error: 'compValue' undeclared (first use in this function); did you mean 'CompValue'?
+                     if(compValue > 65535)
+                        ^~~~~~~~~
+                        CompValue
+../src/MicroBlaze_c_code.c:75:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+22:25:22 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:75:24: error: 'compValue' undeclared (first use in this function); did you mean 'CompValue'?
+                     if(compValue > 65535)
+                        ^~~~~~~~~
+                        CompValue
+../src/MicroBlaze_c_code.c:75:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+22:25:30 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:75:24: error: 'compValue' undeclared (first use in this function); did you mean 'CompValue'?
+                     if(compValue > 65535)
+                        ^~~~~~~~~
+                        CompValue
+../src/MicroBlaze_c_code.c:75:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/MicroBlaze_c_code.o] Error 1
+22:25:37 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9536	    652	   3132	  13320	   3408	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+22:29:00 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+22:39:38 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9536	    652	   3132	  13320	   3408	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+22:41:02 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+22:58:19 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+23:17:22 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9536	    652	   3132	  13320	   3408	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+23:19:09 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+23:20:58 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9632	    652	   3132	  13416	   3468	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+23:22:07 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+23:22:59 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9632	    652	   3132	  13416	   3468	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+23:23:40 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+23:24:34 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9608	    652	   3132	  13392	   3450	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+23:25:17 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+23:27:51 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9452	    652	   3136	  13240	   33b8	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+23:28:39 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+23:38:50 **** Auto Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9500	    652	   3136	  13288	   33e8	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+23:40:40 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+11:11:22 **** Build of project FinalProjectMicroBlaze_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+11:11:40 **** Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectMicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:2:
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectMicroBlaze_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectMicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectMicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectMicroBlaze.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectMicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectMicroBlaze.elf  |tee "FinalProjectMicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9500	    652	   3136	  13288	   33e8	FinalProjectMicroBlaze.elf
+'Finished building: FinalProjectMicroBlaze.elf.size'
+' '
+11:12:03 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.
+11:12:21 **** Incremental Build of configuration Debug for project FinalProjectMicroBlaze ****
+make all 
+make: Nothing to be done for 'all'.

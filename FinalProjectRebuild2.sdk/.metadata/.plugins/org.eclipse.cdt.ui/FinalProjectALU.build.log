@@ -1,0 +1,37 @@
+19:16:41 **** Auto Build of configuration Debug for project FinalProjectALU ****
+make all 
+'Building file: ../src/MicroBlaze_c_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlaze_c_code.o" -I../../FinalProjectALU_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlaze_c_code.d" -MT"src/MicroBlaze_c_code.o" -o "src/MicroBlaze_c_code.o" "../src/MicroBlaze_c_code.c"
+In file included from ../src/MicroBlaze_c_code.c:10:
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../FinalProjectALU_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/MicroBlaze_c_code.c: In function 'main':
+../src/MicroBlaze_c_code.c:38:41: warning: integer constant is too large for its type
+  XGpio_SetDataDirection(&GpioDevice, 2, 0xFFFFFFFFFFFFFFFFFFFFFF);
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:38:41: warning: conversion from 'long long unsigned int' to 'u32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+../src/MicroBlaze_c_code.c:40:12: warning: integer constant is too large for its type
+  OldData = 0xFFFFFFFFFFFFFFFFFFFFFF;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MicroBlaze_c_code.c:40:12: warning: conversion from 'long long unsigned int' to 'Xuint32' {aka 'long unsigned int'} changes value from '18446744073709551615' to '4294967295' [-Woverflow]
+'Finished building: ../src/MicroBlaze_c_code.c'
+' '
+'Building target: FinalProjectALU.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../FinalProjectALU_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FinalProjectALU.elf"  ./src/MicroBlaze_c_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: FinalProjectALU.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size FinalProjectALU.elf  |tee "FinalProjectALU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9568	    652	   3132	  13352	   3428	FinalProjectALU.elf
+'Finished building: FinalProjectALU.elf.size'
+' '
+
+19:16:42 Build Finished (took 900ms)
+
